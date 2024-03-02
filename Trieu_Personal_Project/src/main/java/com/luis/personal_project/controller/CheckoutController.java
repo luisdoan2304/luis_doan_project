@@ -1,30 +1,23 @@
 package com.luis.personal_project.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.luis.personal_project.dao.ProductDAO;
-import com.luis.personal_project.entity.Product;
-
 /**
- * Servlet implementation class ProductController
+ * Servlet implementation class CheckoutController
  */
-@WebServlet("/product")
-public class ProductController extends HttpServlet {
+@WebServlet("/checkout")
+public class CheckoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProductController() {
+    public CheckoutController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,28 +26,8 @@ public class ProductController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String productId = null;
-		int productIdInt = 0;
-		ProductDAO productDAO = null;
-		Product product = null;
-		RequestDispatcher rd = null;
-		
-		productDAO = new ProductDAO();
-		
-		productId  = request.getParameter("productId");		
-		productIdInt = Integer.parseInt(productId);
-		product = productDAO.getProductById(productIdInt);
-		
-		rd = request.getRequestDispatcher("/single-product.jsp");
-		request.setAttribute("product", product);
-		rd.forward(request, response);
-		
-		
-		
-		
-		
-		//response.sendRedirect(request.getContextPath() + "/single-product.jsp");
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

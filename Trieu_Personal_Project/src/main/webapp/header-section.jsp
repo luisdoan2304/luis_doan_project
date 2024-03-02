@@ -22,14 +22,14 @@
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="home"><i
 								class="fa fa-home"></i> Home</a></li>
-						<li><a href="checkout.html">Checkout</a></li>
+						<li><a href="checkout.jsp">Checkout</a></li>
 						<li><a href="category?action=categoryList">Category</a></li>
 						<li><a href="#">Others</a></li>
 						<li><a href="#"><i class="fa fa-envelope"></i> Contact</a></li>
-						<li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+						<li><a href="login"><i class="fa fa-user"></i> Login</a></li>
 						<li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-						<li><a href="cart.html">Cart - <span class="cart-amunt">$100</span>
-								<i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a></li>
+						<li><a href="CartDetail">Cart  <span class="cart-amunt">$100<span>
+								<i class="fa fa-shopping-cart"></i> <span class="product-count">${sessionScope.cart.items.size()}</span></a></li>
 
 					</ul>
 				</div>
